@@ -6,7 +6,7 @@ LOGIN = xkezni01
 
 .PHONY: pdf clean
 
-all: clean to_pdf clean
+all: to_pdf clean
 
 to_pdf:$(LOGIN).tex
 	latex $(LOGIN).tex
