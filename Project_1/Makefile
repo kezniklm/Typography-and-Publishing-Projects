@@ -4,7 +4,7 @@
 
 LOGIN = xkezni01
 
-.PHONY: pdf clean
+.PHONY: to_pdf clean
 
 all: to_pdf clean
 
