@@ -1,4 +1,4 @@
-#ITY - Projekt 1 
+#ITY - Projekt 2 
 #Autor: Matej Keznikl
 #Fakulta: Fakulta informačných technológií VUT v Brne (FIT VUT)
 
