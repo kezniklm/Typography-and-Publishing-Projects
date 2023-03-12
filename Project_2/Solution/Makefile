@@ -2,7 +2,7 @@
 #Autor: Matej Keznikl
 #Fakulta: Fakulta informačných technológií VUT v Brne (FIT VUT)
 
-NAME = proj1
+NAME = proj2
 
 .PHONY: to_pdf clean
 
