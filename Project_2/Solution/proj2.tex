@@ -3,16 +3,15 @@
 %Fakulta: Fakulta informačných technológií VUT v Brne (FIT VUT)
 
 \documentclass[a4paper, twocolumn, 11pt]{article}
+\usepackage[text={18.2cm, 25.2cm}, left=1.4cm, top=2.3cm]{geometry}
 \usepackage[czech]{babel}
 \usepackage[utf8]{inputenc}
-\usepackage[text={18.2cm, 25.2cm}, left=1.4cm, top=2.3cm]{geometry}
 \usepackage[IL2]{fontenc}
 \usepackage[unicode,hidelinks]{hyperref}
 \usepackage{times}
 \usepackage{amsmath}
 \usepackage{amsthm}
 \usepackage{amssymb}
-\usepackage{titlesec} 
 
 \begin{document}
 \begin{titlepage}
@@ -27,7 +26,7 @@
     \end{center}
 \end{titlepage}
 
-\newtheorem{definice}{Definice}
+\newtheorem{definicia}{Definice}
 \newtheorem{veta}{Věta}
 
 \section*{Úvod}
@@ -40,7 +39,7 @@ Na titulní straně je použito prostředí \texttt{titlepage} a~sázení nadpis
 V~této sekci se podíváme na sázení matematických symbolů a~výrazů v~plynulém textu pomocí prostředí \verb|math|. Definice a~věty sázíme pomocí příkazu \verb|\newtheorem| s~využitím balíku \verb|amsthm|. Někdy je vhodné použít konstrukci \verb|${}$| nebo \verb|\mbox{}|, která říká, že (matematický) text nemá být zalomen. 
 
 \label{definicia}
-\begin{definice}
+\begin{definicia}
 \emph{Zásobníkový automat} (ZA) je definován jako sedmice tvaru $A =(Q,\Sigma,\Gamma,\delta,q_0,Z_0,F)$, kde: 
 \begin{itemize}
         \item $Q$ je konečná množina \emph{vnitřních (řídicích) stavů}, 
@@ -49,14 +48,14 @@ V~této sekci se podíváme na sázení matematických symbolů a~výrazů v~ply
         \item $\delta$ je \emph{přechodová funkce} $Q \times (\Sigma \cup \{\epsilon\}) \times \Gamma \rightarrow 2^{Q \times \Gamma^*}$,
         \item $q_0 \in Q$ je \emph{počáteční stav}, $Z_0 \in \Gamma$ je \emph{startovací symbol zásobníku }a $F \subseteq Q$ je množina \emph{koncových stavů.} 
 \end{itemize}
-\end{definice}
+\end{definicia}
 
 Nechť $P =(Q,\Sigma,\Gamma,\delta,q_0,Z_0,F)$ je ZA. \emph{Konfigurací} nazveme trojici $(q, w, \alpha) \in Q \times \Sigma^* \times \Gamma^*$, kde $q$ je aktuální stav vnitřního řízení, $w$ je dosud nezpracovaná část vstupního řetězce a~$\alpha = Z_{i_1}Z_{i_2} \dots Z_{i_k}$ je obsah zásobníku.
 
 \subsection{Podsekce obsahující definici a~větu}
-\begin{definice}
+\begin{definicia}
 \emph{Řetězec} $w$~\emph{nad abecedou} $\Sigma$~\emph{je přijat ZA} A~jestliže $(q_0, w, Z_0) \overset{\ast}{\underset{A}{\vdash}} (q_F,\epsilon, \gamma)$ pro nějaké $\gamma \in \Gamma^*$ a $q_F \in F$. Množina $L(A) = \{w\ |\ w $ je přijat ZA A\} $\subseteq \Sigma^*$ je \emph{jazyk přijímaný ZA} A.
-\end{definice}
+\end{definicia}
 \begin{veta}
 Třída jazyků, které jsou přijímány ZA, odpovídá \emph{bezkontextovým jazykům}.
 \end{veta}
