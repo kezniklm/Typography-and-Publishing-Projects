@@ -46,22 +46,22 @@ V této sekci se podíváme na sázení matematických symbolů a výrazů v ply
 \begin{definice}
 \emph{Zásobníkový automat} (ZA) je definován jako sedmice tvaru $A =(Q,\Sigma,\Gamma,\delta,q_0,Z_0,F)$, kde: 
 \begin{itemize}
-        \item $Q$ je konečná množina \emph{vnitřních (řídicích) stavů,} 
+        \item $Q$ je konečná množina \emph{vnitřních (řídicích) stavů}, 
         \item $\Sigma$ je konečná \emph{vstupní abeceda}, 
         \item $\Gamma$ je konečná \emph{zásobníková abeceda}, 
         \item $\delta$ je \emph{přechodová funkce} $Q \times (\Sigma \cup \{\epsilon\}) \times \Gamma \rightarrow 2^{Q \times \Gamma^*}$,
-        \item $q_0 \in Q$ je \emph{počáteční stav,} $Z_0 \in \Gamma$ je \emph{startovací symbol zásobníku a} $F \subseteq Q$ \emph{je množina koncových stavů.} 
+        \item $q_0 \in Q$ je \emph{počáteční stav}, $Z_0 \in \Gamma$ je \emph{startovací symbol zásobníku }a $F \subseteq Q$ je množina \emph{koncových stavů.} 
 \end{itemize}
 \end{definice}
 
-Nechť $P =(Q,\Sigma,\Gamma,\delta,q_0,Z_0,F)$ je ZA. Konfigurací nazveme trojici $(q, w, \alpha) \in Q \times \Sigma^* \times \Gamma^*)$, kde $q$ je aktuální stav vnitřního řízení, $w$ je dosud nezpracovaná část vstupního řetězce a $\alpha = Z_{i_1}Z_{i_2} \dots Z_{i_k}$ je obsah zásobníku.
+Nechť $P =(Q,\Sigma,\Gamma,\delta,q_0,Z_0,F)$ je ZA. \emph{Konfigurací} nazveme trojici $(q, w, \alpha) \in Q \times \Sigma^* \times \Gamma^*$, kde $q$ je aktuální stav vnitřního řízení, $w$ je dosud nezpracovaná část vstupního řetězce a $\alpha = Z_{i_1}Z_{i_2} \dots Z_{i_k}$ je obsah zásobníku.
 
 \subsection{Podsekce obsahující definici a větu}
 \begin{definice}
-\emph{Řetězec} $w$ \emph{nad abecedou} $\Sigma$ \emph{je přijat ZA} A jestliže $(q_0, w, Z_0) \overset{\ast}{\underset{A}{\vdash}} (q_F,\epsilon, \gamma)$ pro nějaké $\gamma \in \Gamma^*$ a $q_F \in F$. Množina $L(A) = \{w\ |\ w $ je přijat ZA A\} $\subseteq \Sigma^*$ je \emph{jazyk přijímaný ZA} A.
+\emph{Řetězec} $w$ \emph{nad abecedou} $\Sigma$ \emph{je přijat ZA} A~jestliže $(q_0, w, Z_0) \overset{\ast}{\underset{A}{\vdash}} (q_F,\epsilon, \gamma)$ pro nějaké $\gamma \in \Gamma^*$ a $q_F \in F$. Množina $L(A) = \{w\ |\ w $ je přijat ZA A\} $\subseteq \Sigma^*$ je \emph{jazyk přijímaný ZA} A.
 \end{definice}
 \begin{veta}
-Třída jazyků, které jsou přijímány ZA, odpovídá \emph{bezkontextovým jazykům.}
+Třída jazyků, které jsou přijímány ZA, odpovídá \emph{bezkontextovým jazykům}.
 \end{veta}
 
 \section{Rovnice}
@@ -72,13 +72,13 @@ $$
 V rovnici jsou využity tři typy závorek s různou explicitně definovanou velikostí. Také nepřehlédněte, že nasledující tři rovnice mají zarovnaná rovnítka, a použijte k tomuto účelu vhodné prostředí. 
 \begin{eqnarray}
 -cos^2\beta &=& \frac{\frac{\frac{1}{x}+\frac{1}{3}}{y}+1000}{\overset{8}{\underset{j=2}{\Pi}q_j}} \\
-\bigg(\Big \{ b \star [3 \div 4 ]\circ a \Big \}^\frac{2}{3} \bigg) \quad &=& \log_{10} x \\
+\bigg(\Big \{ b \star [ 3 \div 4 ]\circ a \Big \}^\frac{2}{3} \bigg) \quad &=& \log_{10} x \\
 \int_{a}^b f(x)\ dx &=& \int_{c}^d f(y)\ dy
 \end{eqnarray}
-V této větě vidíme, jak vypadá implicitní vysázení limity $\lim_{m\rightarrow\infty}f(m)$ v normálním odstavci textu. Podobně je to i~s~dalšími symboly jako $\bigcup_{N\in \mathcal{M}} N$ či $\sum_{i=1}^m x_{i}^2$. S vynucením méně úsporné sazby příkazem \verb|\limits| budou vzorce vysázeny v podobě $\lim\limits_{m\rightarrow\infty}f(m)$ a $\sum\limits_{i=1}^m x_{i}^2$.
+V této větě vidíme, jak vypadá implicitní vysázení limity $\lim_{m\rightarrow\infty}f(m)$ v normálním odstavci textu. Podobně je to i~s~dalšími symboly jako $\bigcup_{N\in \mathcal{M}} N$ či $\sum_{i=1}^m x_{i}^2$. S vynucením méně úsporné sazby příkazem \verb|\limits| budou vzorce vysázeny v podobě $\lim\limits_{m\rightarrow\infty}f(m)$ a $\sum\limits_{i=1}^m x_{i}^4$.
 
 \section{Matice}
-Pro sázení matic se velmi často používá prostředí array a závorky (\verb|\left|, \verb|\right|). 
+Pro sázení matic se velmi často používá prostředí \texttt{array} a závorky (\verb|\left|, \verb|\right|). 
 $$
 \mathbf{B}=\left|\begin{array}{cccc}
 b_{11} & b_{12} & \dots & b_{1 n} \\
