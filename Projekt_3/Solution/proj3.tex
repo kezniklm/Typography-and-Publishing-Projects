@@ -25,16 +25,16 @@
 			\end{center}
 			\Large \today \hfill Matej Keznikl
 			\end{titlepage}
-						
+									
 			\section{Úvodní strana}
 			Název práce umístěte do zlatého řezu a nezapomeňte uvést \uv{dnešní} (today) datum a vaše jméno a příjmení.
-						
+									
 			\section{Tabulky}
 			Pro sázení tabulek můžeme použít buď prostředí\texttt{ tabbing }nebo prostředí\texttt{ tabular}.
-						
+									
 			\subsection{Prostředí\texttt{ tabbing}}
 			Při použití\texttt{ tabbing }vypadá tabulka následovně:
-						
+									
 			\begin{tabbing}
 				Vodní melouny \quad  \=\textbf{Cena}\quad   \=\textbf{Množství}\kill
 				\textbf{Ovoce}  \>\textbf{Cena} \>\textbf{Množství}\\
@@ -43,10 +43,10 @@
 				Vodní melouny   \> 35,--        \> 1 kus\\
 			\end{tabbing}
 			Toto prostředí se dá také použít pro sázení algoritmů, ovšem vhodnější je použít prostředí\texttt{ algorithm }nebo\texttt{ algorithm2e }(viz sekce \ref{algoritmy}).
-						
+									
 			\subsection{Prostředí\texttt{ tabular}}
 			Další možností, jak vytvořit tabulku, je použít prostředí\texttt{ tabular}. Tabulky pak budou vypadat takto\footnote{Kdyby byl problem s\texttt{ cline, }zkuste se podívat třeba sem: \href{http://www.abclinuxu.cz/tex/poradna/show/325037}{http://www.abclinuxu.cz/tex/poradna/show/325037}.}:
-						
+									
 			\bigskip
 			\begin{table}[h]
 				\catcode`-=12
@@ -61,7 +61,7 @@
 				\end{tabular}
 				\caption{Tabulka kurzů k~dnešnímu dni}\label{tab:meny}
 			\end{table}
-						
+									
 			\bigskip
 			\begin{table}[h]
 				\catcode`-=12
@@ -128,19 +128,19 @@
 				}
 				\KwRet{$X_t$}
 			\end{algorithm}
-						
+									
 			\section{Obrázky}
 			Do našich článků můžeme samozřejmě vkládat obrázky. Pokud je obrázkem fotografie, můžeme klidně použít bitmapový soubor. Pokud by to ale mělo být nějaké schéma nebo něco podobného, je dobrým zvykem takovýto obrázek vytvořit vektorově.
-						
+									
 			\begin{figure}[h]
 				\begin{center}
 					\scalebox{0.4}{\includegraphics{etiopan.eps} \reflectbox{\includegraphics{etiopan.eps}}}
 					\caption{Malý Etiopánek a jeho bratříček}\label{fig:etiopanek}
 				\end{center}
 			\end{figure}
-						
+									
 			Rozdíl mezi vektorovým \dots
-						
+									
 			\begin{figure}[h]
 				\begin{center}
 					\scalebox{0.4}{\includegraphics{oniisan.eps}}
@@ -148,7 +148,7 @@
 				\end{center}
 			\end{figure}
 			\noindent\dots a bitmapovým obrázkem
-						
+									
 			\begin{figure}[h]
 				\begin{center}
 					\scalebox{0.6}{\includegraphics{oniisan2.eps}}
@@ -156,12 +156,12 @@
 				\end{center}
 			\end{figure}
 			\noindent se projeví například při zvětšení.
-						
+									
 			Odkazy (nejen ty) na obrázky \ref*{fig:etiopanek}, \ref*{fig:oniisan1} a \ref*{fig:oniisan2}, na tabulky \ref*{tab:meny} a \ref*{tab:logika} a také na algoritmus \ref*{algo1} jsou udělány pomocí křížových
 			odkazů. Pak je ovšem potřeba zdrojový soubor přeložit dvakrát.
-						
+									
 			Vektorové obrázky lze vytvořit i přímo v~\LaTeX u, například pomocí prostředí\texttt{ picture.}
-						
+									
 			\begin{landscape}
 				\begin{figure}[h]
 					\setlength{\unitlength}{1mm}
@@ -169,36 +169,36 @@
 					\begin{picture}(200, 108)
 						\linethickness{1.5pt}
 						\put(0,0){\framebox(200,100){}}
-								    
+														    
 						\put(183,14){\line(0,1){10}} 
 						\put(183,41){\line(0,1){6}} 
 						\put(172,47){\line(0,1){2}} 
 						\put(123,47){\line(0,1){10}} 
-						            
+												            
 						\put(22,52){\line(1,0){45}} 
 						\put(34,29){\line(1,0){36}} 
 						\put(85,24){\line(1,0){98}} 
 						\put(42,47){\line(1,0){141}} 
 						\put(74,39){\line(1,0){107}}
 						\put(67,57){\line(1,0){56}} 
-								    
+														    
 						\put(22,14){\line(0,1){38}} 
 						\put(34,14){\line(0,1){15}} 
 						\put(74,28){\line(0,1){11}}
 						\put(42,41){\line(0,1){6}}
 						\put(67,47){\line(0,1){10}}
 						\put(181,24){\line(0,1){15}} 
-								    
+														    
 						\put(42,41){\line(1,0){141}} 
 						\put(123,49){\line(1,0){49}} 
-								    
+														    
 						\linethickness{1pt}
 						\put(70,29){\line(3,-1){43}} 
 						\put(42,41){\line(1,-1){12}} 
-								    
+														    
 						\linethickness{0pt}
 						\put(170,80){\circle{14}} 
-								    
+														    
 						\linethickness{4.2pt}
 						\put(4,14){\line(1,0){192}}																
 					\end{picture}
