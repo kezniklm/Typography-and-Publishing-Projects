@@ -11,7 +11,7 @@ all: to_pdf clean
 to_pdf:$(NAME).tex
 	latex $(NAME).tex
 	latex $(NAME).tex
-	dvips  -t a4 $(NAME).dvi
+	dvips  -t -sPAPERSIZE=a4 $(NAME).dvi
 	ps2pdf $(NAME).ps
 
 clean:
