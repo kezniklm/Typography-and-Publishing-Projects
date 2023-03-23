@@ -6,7 +6,7 @@ NAME = proj3
 
 .PHONY: to_pdf clean
 
-all: to_pdf
+all: to_pdf clean
 
 to_pdf:$(NAME).tex
 	latex $(NAME).tex
