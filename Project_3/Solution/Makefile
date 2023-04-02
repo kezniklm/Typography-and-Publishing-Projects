@@ -7,7 +7,7 @@ NAME = proj3
 
 .PHONY: to_pdf clean zip
 
-all: to_pdf clean
+all: to_pdf
 
 to_pdf:$(NAME).tex
 	latex $(NAME).tex
