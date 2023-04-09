@@ -20,4 +20,4 @@ clean:
 	rm -f $(NAME).out $(NAME).ps $(NAME).aux $(NAME).dvi $(NAME).log
 
 zip:
-	zip $(NAME) *
+	zip xkezni01.zip *
