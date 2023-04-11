@@ -4,10 +4,6 @@
 
 NAME = proj4
 
-.PHONY: to_pdf clean zip
-
-all: to_pdf
-
 to_pdf:$(NAME).tex
 	latex $(NAME).tex
 	bibtex $(NAME).aux
@@ -15,9 +11,11 @@ to_pdf:$(NAME).tex
 	latex $(NAME).tex
 	dvips -sPAPERSIZE=a4 $(NAME).dvi
 	ps2pdf $(NAME).ps
+
+.PHONY: to_pdf clean zip
 	
 clean:
-	rm -f $(NAME).out $(NAME).ps $(NAME).aux $(NAME).dvi $(NAME).log
+	rm -f $(NAME).out $(NAME).ps $(NAME).aux $(NAME).dvi $(NAME).log xkezni01.zip
 
 zip:
 	zip xkezni01.zip *
